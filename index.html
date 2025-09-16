@@ -268,6 +268,10 @@ a {
   padding: 6px;
   background: linear-gradient(135deg, #7f56d9, #06b6d4);
   position: relative;
+  overflow: hidden; /* keeps image inside the circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -277,8 +281,11 @@ a {
 }
 
 .profile-pic img {
+  width: 100%;   /* scale image to fit wrapper */
+  height: 100%;  /* keep it inside circle */
+  object-fit: cover; /* no stretching, fills the circle */
   border-radius: 50%;
-  border: 3px solid #111; /* inner border */
+  border: 3px solid #111;
 }
 
 /* ==== Section Styles ==== */
